@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <title>LEVIRDet - Research by LEVIR Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./assets/main-site/assets.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Site navigation">
+      <a class="brand" href="https://levir.buaa.edu.cn/" target="_blank" rel="noreferrer" aria-label="LEVIR Lab website">
+        <span>LEVIRDET</span>
+        <small>Research by LEVIR Lab</small>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#top">Home</a>
+        <a href="./levir-demo/">Demo</a>
+        <a href="https://www.sciengine.com/cfs/files/pdfs/view/1674-733X/6E3CAFCF2A464C9BBC0BE785B15D8300-mark.pdf" target="_blank" rel="noreferrer">Paper</a>
+        <a href="https://github.com/QinzheYang/Awesome-RS-State-Space-Model" target="_blank" rel="noreferrer">Download</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <p class="eyebrow">AI Computer Vision Research</p>
+          <h1 id="hero-title">
+            LEVIRDet: A Million-Scale 159-Category Dataset and Foundation
+            Model for Universal Remote Sensing Object Detection
+          </h1>
+          <p class="hero-copy">
+            LEVIRDet-159 is the largest and most comprehensive remote sensing
+            object detection dataset to date, with 159 categories, ~2.56
+            million bounding boxes, and ~700k fine-grained annotations under a
+            multi-level taxonomy. LEVIRDetNet is a universal detector that can
+            reliably operate across sensors, resolutions, and category systems.
+          </p>
+
+          <div class="hero-actions" aria-label="Hero links">
+            <a class="text-link" href="#demonstrations">
+              <span class="link-dot" aria-hidden="true">&gt;</span>
+              Try the demo
+            </a>
+            <a class="text-link" href="https://www.sciengine.com/cfs/files/pdfs/view/1674-733X/6E3CAFCF2A464C9BBC0BE785B15D8300-mark.pdf" target="_blank" rel="noreferrer">
+              <span class="link-dot" aria-hidden="true">&gt;</span>
+              Read the paper
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="hero-rule" aria-hidden="true">
+        <span></span>
+      </div>
+
+      <section class="overview section-white" aria-labelledby="overview-title">
+        <div class="section-intro center">
+          <h2 id="overview-title">LEVIRDet OVERVIEW</h2>
+          <p>
+            We construct LEVIRDet-159, the up-to-date largest and most
+            fine-grained remote sensing object detection dataset, with 159
+            categories, ~2.56 million bounding boxes, and ~700k fine-grained
+            annotations under a multi-level taxonomy. Based on LEVIRDet-159, we
+            propose LEVIRDetNet, a scale-hierarchy-aware detection foundation
+            model designed for universal remote sensing detection.
+          </p>
+          <p>
+            Without target-domain training or fine-tuning, LEVIRDetNet ranks
+            first on all 9 benchmarks and improves the strongest competing
+            methods by 5.02 mAP on average, while maintaining stronger
+            precision-recall stability under practical confidence thresholds.
+          </p>
+          <a class="small-button light" href="https://www.sciengine.com/cfs/files/pdfs/view/1674-733X/6E3CAFCF2A464C9BBC0BE785B15D8300-mark.pdf" target="_blank" rel="noreferrer">Read the research paper</a>
+        </div>
+
+        <div class="overview-grid">
+          <article class="overview-card">
+            <img src="./assets/main-site/overview/overview-scale.jpg" alt="Dataset-scale comparison across 18 dimensions" />
+            <h3>LEVIRDet-159 has reached the largest scale in 18 dimensions.</h3>
+            <p>
+              It covers 30 common parent categories and 159 category types
+              across global regions and diverse imaging conditions, and
+              surpasses existing datasets in category number, image number,
+              annotation number, object-size coverage, and geographic coverage.
+            </p>
+          </article>
+
+          <article class="overview-card">
+            <img src="./assets/main-site/overview/overview-sota.jpg" alt="LEVIRDetNet benchmark results" />
+            <h3>LEVIRDetNet achieves SOTA performance on 9 external benchmarks.</h3>
+            <p>
+              Without target-domain training or fine-tuning, LEVIRDetNet ranks
+              first on all nine benchmarks and improves the strongest competing
+              methods by 5.02 mAP on average, while maintaining stronger
+              precision-recall stability under practical confidence thresholds.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="showcase section-gray" id="demonstrations" aria-labelledby="demo-title">
+        <div class="section-head">
+          <div>
+            <h2 id="demo-title">LEVIRDet Demonstrations</h2>
+            <p>
+              LEVIRDetNet ranks first on all 9 benchmarks and improves the
+              strongest competing methods by 5.02 mAP on average. It shows
+              strong generalization across diverse scenes, categories,
+              resolutions, and imaging conditions without target-domain
+              training.
+            </p>
+          </div>
+
+          <div class="head-tools">
+            <a class="primary-pill" href="./levir-demo/">Download Model</a>
+            <button class="round-button" type="button" data-demo-prev aria-label="Move demonstration images left">&lt;</button>
+            <button class="round-button" type="button" data-demo-next aria-label="Move demonstration images right">&gt;</button>
+            <button class="refresh-button" type="button" data-demo-refresh aria-label="Refresh demonstration images">&#8635;</button>
+          </div>
+        </div>
+
+        <div class="carousel-window" aria-label="LEVIRDet demonstration images">
+          <div class="carousel-track" data-demo-track></div>
+        </div>
+
+        <a class="inline-more" href="./levir-demo/">
+          <span aria-hidden="true">-&gt;</span>
+          Try more demo
+        </a>
+      </section>
+
+      <section class="dataset-block section-white" id="dataset" aria-labelledby="dataset-title">
+        <div class="section-head compact">
+          <div>
+            <h2 id="dataset-title">LEVIRDet-159 Dataset</h2>
+            <p>
+              LEVIRDet-159 is, to our knowledge, the up-to-date largest, the
+              most fine-grained, and the first million-box dataset built for
+              broad-category universal remote sensing object detection under a
+              unified tight horizontal bounding box protocol.
+            </p>
+            <a class="primary-pill" href="https://github.com/QinzheYang/Awesome-RS-State-Space-Model" target="_blank" rel="noreferrer">Download Dataset</a>
+          </div>
+          <button class="refresh-button dark" type="button" data-p1-refresh aria-label="Refresh dataset scene images">&#8635;</button>
+        </div>
+
+        <div class="scene-grid" data-p1-grid aria-label="Dataset scene samples"></div>
+      </section>
+
+      <section class="dataset-block section-white crops" aria-labelledby="dataset-crops-title">
+        <div class="section-head compact">
+          <div>
+            <h2 id="dataset-crops-title">LEVIRDet-159 Dataset</h2>
+            <p>
+              LEVIRDet-159 is the up-to-date largest and most fine-grained
+              remote sensing object detection dataset, with 159 categories,
+              ~2.56 million bounding boxes, and ~700k fine-grained annotations
+              under a multi-level taxonomy.
+            </p>
+            <a class="primary-pill" href="https://github.com/QinzheYang/Awesome-RS-State-Space-Model" target="_blank" rel="noreferrer">Download Dataset</a>
+          </div>
+          <button class="refresh-button dark" type="button" data-p2-refresh aria-label="Refresh bounding-box crops">&#8635;</button>
+        </div>
+
+        <div class="crop-grid" data-p2-grid aria-label="Fine-grained bounding-box crop samples"></div>
+      </section>
+
+      <section class="resources section-gray" aria-labelledby="resources-title">
+        <h2 id="resources-title">Explore additional resources</h2>
+        <div class="resource-links">
+          <a class="primary-pill" href="https://www.sciengine.com/cfs/files/pdfs/view/1674-733X/6E3CAFCF2A464C9BBC0BE785B15D8300-mark.pdf" target="_blank" rel="noreferrer">Read the research paper</a>
+          <a class="primary-pill" href="https://github.com/QinzheYang/Awesome-RS-State-Space-Model" target="_blank" rel="noreferrer">Know more detail</a>
+          <a class="primary-pill" href="https://github.com/QinzheYang/Awesome-RS-State-Space-Model" target="_blank" rel="noreferrer">Download model and data</a>
+          <a class="primary-pill" href="./levir-demo/">Try more demo</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

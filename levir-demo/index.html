@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <title>LEVIRDet Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="https://levir.buaa.edu.cn/" target="_blank" rel="noreferrer" aria-label="LEVIR Lab website">
+        <span class="brand-name">LEVIRDET</span>
+        <span class="brand-line">Research by LEVIR Lab</span>
+      </a>
+
+      <nav class="nav" aria-label="Page links">
+        <a href="../#top">Home</a>
+        <a href="#demo">Demo</a>
+        <a href="https://www.sciengine.com/cfs/files/pdfs/view/1674-733X/6E3CAFCF2A464C9BBC0BE785B15D8300-mark.pdf" target="_blank" rel="noreferrer">Paper</a>
+        <a href="https://github.com/QinzheYang/Awesome-RS-State-Space-Model" target="_blank" rel="noreferrer">Download</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="demo-screen is-active" id="home" data-view="demo">
+        <div class="task-carousel" aria-label="Detection task carousel">
+          <article class="task-card" data-task="wide">
+            <h2>Ultra-Wide Area<br />Object Detection</h2>
+            <p>Each image is processed by a single forward pass without tiling (~0.06s, 4090D, single batchsize)</p>
+          </article>
+
+          <article class="task-card" data-task="object">
+            <h1>Object<br />Detection</h1>
+            <p>LEVIRDetNet show strong generalization across diverse scenes, categories, resolutions, and imaging conditions without target-domain training.</p>
+          </article>
+
+          <article class="task-card" data-task="fine">
+            <h2>Fine-grained<br />Object Detection</h2>
+            <p>LEVIRDet covers 30 parent categories and 159 object types under a unified detection protocol, including 45 aircraft types, 13 vehicle types, and 71 ship types</p>
+          </article>
+        </div>
+
+        <div class="controls-row">
+          <a class="download-button" href="https://github.com/QinzheYang/Awesome-RS-State-Space-Model" target="_blank" rel="noreferrer">Download Model</a>
+          <button class="round-button" type="button" data-shift="-1" aria-label="Previous task">&lt;</button>
+          <button class="round-button" type="button" data-shift="1" aria-label="Next task">&gt;</button>
+        </div>
+
+        <section class="image-comparison" id="demo" aria-label="Detection visualization">
+          <figure class="image-panel">
+            <div class="image-stage original-stage">
+              <img id="sourceImage" alt="Selected remote sensing image" />
+            </div>
+            <figcaption>
+              <button class="text-button" type="button" id="openPicker">Try another image</button>
+            </figcaption>
+          </figure>
+
+          <div class="comparison-arrow" aria-hidden="true">&rarr;</div>
+
+          <figure class="image-panel">
+            <div class="image-stage detection-stage" id="detectionStage">
+              <img id="visImage" alt="Detection visualization image" />
+              <div class="box-layer" id="boxLayer" aria-label="Detection boxes"></div>
+            </div>
+            <figcaption>Hover to highlight object</figcaption>
+          </figure>
+        </section>
+
+        <section class="hierarchy-panel" id="hierarchyPanel" aria-label="Fine-grained hierarchy">
+          <div class="hierarchy-header">
+            <div>
+              <span>Fine-grained hierarchy</span>
+              <strong id="hierarchyTitle">Hover over an object</strong>
+            </div>
+            <div class="hierarchy-toggle" aria-label="Hierarchy view mode">
+              <button class="hierarchy-mode is-active" type="button" data-hierarchy-mode="tree">Tree</button>
+              <button class="hierarchy-mode" type="button" data-hierarchy-mode="graph">Graph</button>
+            </div>
+          </div>
+          <div class="hierarchy-content" id="hierarchyContent">
+            Hover over a fine-grained detection box to inspect its parent,
+            ancestors, children, and sibling categories.
+          </div>
+        </section>
+      </section>
+
+      <section class="picker-screen" data-view="picker" aria-label="Image selection">
+        <div class="picker-spacer"></div>
+        <div class="picker-panel">
+          <button class="picker-back" type="button" id="backToDemo">+ selected one from below</button>
+          <h1>Select one from below</h1>
+          <div class="thumb-grid" id="thumbGrid" aria-label="Available demo images"></div>
+        </div>
+      </section>
+    </main>
+
+    <div class="status" id="status" role="status">Loading demo data...</div>
+
+    <script src="./demo-data.js"></script>
+    <script src="./fine-data.js"></script>
+    <script src="./uwd-data.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
