@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="index,follow" />
+    <meta name="robots" content="noindex,nofollow" />
     <title>LEVIRDet - Research by LEVIR Lab</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./assets/main-site/assets.js" defer></script>
@@ -151,7 +151,7 @@
         <div class="scene-grid" data-p1-grid aria-label="Dataset scene samples"></div>
       </section>
 
-      <section class="dataset-block section-white crops" aria-labelledby="dataset-crops-title">
+      <section class="dataset-block section-gray crops" aria-labelledby="dataset-crops-title">
         <div class="section-head compact">
           <div>
             <h2 id="dataset-crops-title">LEVIRDet-159 Dataset</h2>
@@ -167,6 +167,25 @@
         </div>
 
         <div class="crop-grid" data-p2-grid aria-label="Fine-grained bounding-box crop samples"></div>
+      </section>
+
+      <section class="model-block section-white" id="model" aria-labelledby="model-title">
+        <div class="section-head compact model-head">
+          <div>
+            <h2 id="model-title">LEVIRDetNet</h2>
+            <p>
+              LEVIRDetNet is a scale-hierarchy-aware detection foundation model
+              for universal remote sensing object detection. It couples online
+              visual Ground Sampling Distance (GSD) prediction, GSD-conditioned
+              query modulation and allocation, and a hierarchy-aware detection
+              head for mixed-granularity remote sensing supervision.
+            </p>
+          </div>
+        </div>
+
+        <figure class="method-figure">
+          <img src="./assets/main-site/method/levir-detnet-method.jpg" alt="LEVIRDetNet method overview" />
+        </figure>
       </section>
 
       <section class="resources section-gray" aria-labelledby="resources-title">

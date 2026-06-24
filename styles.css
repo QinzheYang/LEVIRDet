@@ -97,8 +97,14 @@ button {
 }
 
 .hero {
+  position: relative;
+  overflow: hidden;
   min-height: 642px;
-  background: var(--black);
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.44)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.58)),
+    url("./assets/main-site/hero/hero-backdrop.jpg") center / cover no-repeat,
+    var(--black);
   color: var(--white);
   display: grid;
   align-items: center;
@@ -106,6 +112,8 @@ button {
 }
 
 .hero-inner {
+  position: relative;
+  z-index: 1;
   width: min(var(--page), 100%);
   margin: 0 auto;
 }
@@ -487,6 +495,10 @@ h2 {
   padding-bottom: 84px;
 }
 
+.crops.section-gray {
+  background: #eef1f5;
+}
+
 .crop-grid {
   width: min(var(--page), 100%);
   margin: 0 auto;
@@ -504,6 +516,30 @@ h2 {
 
 .crop-tile img {
   object-fit: cover;
+}
+
+.model-block {
+  padding-top: 30px;
+  padding-bottom: 56px;
+}
+
+.model-head {
+  margin-bottom: 22px;
+}
+
+.model-head p {
+  max-width: 560px;
+}
+
+.method-figure {
+  width: min(var(--page), 100%);
+  margin: 0 auto;
+}
+
+.method-figure img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .empty-state {
